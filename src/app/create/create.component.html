@@ -1,0 +1,34 @@
+<div class="container-form" v-if="agregar">
+    <form action="">
+        <div class="title"><label for="">Nuevo Influencer</label></div>
+        <input type="text" class="form-control mb-2" placeholder="Username" [(ngModel)]="username"><br>
+        <input type="text" class="form-control mb-2" placeholder="Nombre Completo" [(ngModel)]="full_name"><br>
+        <input type="text" class="form-control mb-2" placeholder="Telefono" [(ngModel)]="phone"><br>
+        <input type="text" class="form-control mb-2" placeholder="E-mail" [(ngModel)]="email"><br>
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <input type="text" class="form-control mb-2" placeholder="Seguidores?" [(ngModel)]="followers_count">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control mb-2" placeholder="Seguidos?" [(ngModel)]="following_count">
+            </div>
+        </form>
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <label for="">Categoria:</label>
+                <select class="form-control" name="" id="" [(ngModel)]="category_id">
+                    
+                </select>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="">Red Social:</label>
+                <select class="form-control" name="" id="" [(ngModel)]="social_network_id">
+                    <app-social-network></app-social-network>
+                </select>
+            </div>
+        </form>
+        <br>
+        <button style="position: relative; left: 120px;" class="btn btn-light">Cancelar</button>
+        <button (ngSubmit)="agregar()" style="position: relative; left: 140px;" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
